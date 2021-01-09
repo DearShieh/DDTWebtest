@@ -1,0 +1,6 @@
+"Status","Name","Duration in ms","Description"
+"failed","scripts.test_meishan_project.TestAddDevice#test_1add_device","11176","
+        测试添加设备
+        :param add_device:
+        :return:
+        "

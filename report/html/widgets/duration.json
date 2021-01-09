@@ -1,0 +1,11 @@
+[ {
+  "uid" : "76b74ef78fb09096",
+  "name" : "添加电力设备",
+  "time" : {
+    "start" : 1609320155306,
+    "stop" : 1609320166482,
+    "duration" : 11176
+  },
+  "status" : "failed",
+  "severity" : "normal"
+} ]

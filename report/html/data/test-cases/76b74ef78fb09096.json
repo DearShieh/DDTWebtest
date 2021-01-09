@@ -1,0 +1,344 @@
+{
+  "uid" : "76b74ef78fb09096",
+  "name" : "添加电力设备",
+  "fullName" : "scripts.test_meishan_project.TestAddDevice#test_1add_device",
+  "historyId" : "16f4c6a193280d0d0b3c90df6bf357c8",
+  "time" : {
+    "start" : 1609320155306,
+    "stop" : 1609320166482,
+    "duration" : 11176
+  },
+  "description" : "\n        测试添加设备\n        :param add_device:\n        :return:\n        ",
+  "descriptionHtml" : "<pre><code>    测试添加设备\n    :param add_device:\n    :return:\n</code></pre>\n",
+  "status" : "failed",
+  "statusMessage" : "AssertionError",
+  "statusTrace" : "self = <scripts.test_meishan_project.TestAddDevice object at 0x000001FD29718670>\nadd_device = {'cases': [{'method': 'open_url', 'name': '打开网页', 'url': 'http://121.37.130.248'}, {'locator': '//*[text()=\"系统配置\"]', '...v/input', 'method': 'input_info', 'name': '设备名称', 'value': 'test'}, ...], 'description': '添加电力设备成功', 'title': '添加电力设备'}\n\n    @pytest.mark.run(order=1)\n    @allure.story(\"Add device\")  # 模块分组（如：登录成功、登录失败都在登录模块）\n    @pytest.mark.parametrize('add_device', read_yml(\"add_device\"))\n    def test_1add_device(self, add_device):\n        \"\"\"\n        测试添加设备\n        :param add_device:\n        :return:\n        \"\"\"\n        allure.dynamic.title(add_device[\"title\"])  # 动态获取yaml中的title\n        allure.description(add_device[\"description\"])  # 用例描述\n        test_cases = add_device[\"cases\"]\n        for cases in test_cases:\n            list_case = list(cases.values())\n            with allure.step(list_case[0]):  # 0在yaml文件中为name字段；1为方法名称；2为方法参数\n                func = getattr(self.base_action, list_case[1])\n                values = list_case[2:]\n                try:\n                    func(*values)\n                except Exception as e:\n                    png = self.base_action.driver.get_screenshot_as_png()\n                    name = time.strftime('%Y-%m-%d %H:%M:%S')+list_case[0]\n                    allure.attach(png, name, allure.attachment_type.PNG)\n>                   raise e\n\nscripts\\test_meishan_project.py:53: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nscripts\\test_meishan_project.py:48: in test_1add_device\n    func(*values)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <tools.base_action.BaseAction object at 0x000001FD29718730>, locator = '//*[text()=\"test\"]', text = 'abcd'\n\n    def assert_info(self, locator=None, text=None):\n        if text is not None:\n            try:\n>               assert text == str(self.find_element(locator).text)\nE               AssertionError\n\ntools\\base_action.py:102: AssertionError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "xunit_setup_class_fixture_TestAddDevice",
+    "time" : {
+      "start" : 1609320152000,
+      "stop" : 1609320155304,
+      "duration" : 3304
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "\n        测试添加设备\n        :param add_device:\n        :return:\n        ",
+    "status" : "failed",
+    "statusMessage" : "AssertionError",
+    "statusTrace" : "self = <scripts.test_meishan_project.TestAddDevice object at 0x000001FD29718670>\nadd_device = {'cases': [{'method': 'open_url', 'name': '打开网页', 'url': 'http://121.37.130.248'}, {'locator': '//*[text()=\"系统配置\"]', '...v/input', 'method': 'input_info', 'name': '设备名称', 'value': 'test'}, ...], 'description': '添加电力设备成功', 'title': '添加电力设备'}\n\n    @pytest.mark.run(order=1)\n    @allure.story(\"Add device\")  # 模块分组（如：登录成功、登录失败都在登录模块）\n    @pytest.mark.parametrize('add_device', read_yml(\"add_device\"))\n    def test_1add_device(self, add_device):\n        \"\"\"\n        测试添加设备\n        :param add_device:\n        :return:\n        \"\"\"\n        allure.dynamic.title(add_device[\"title\"])  # 动态获取yaml中的title\n        allure.description(add_device[\"description\"])  # 用例描述\n        test_cases = add_device[\"cases\"]\n        for cases in test_cases:\n            list_case = list(cases.values())\n            with allure.step(list_case[0]):  # 0在yaml文件中为name字段；1为方法名称；2为方法参数\n                func = getattr(self.base_action, list_case[1])\n                values = list_case[2:]\n                try:\n                    func(*values)\n                except Exception as e:\n                    png = self.base_action.driver.get_screenshot_as_png()\n                    name = time.strftime('%Y-%m-%d %H:%M:%S')+list_case[0]\n                    allure.attach(png, name, allure.attachment_type.PNG)\n>                   raise e\n\nscripts\\test_meishan_project.py:53: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nscripts\\test_meishan_project.py:48: in test_1add_device\n    func(*values)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <tools.base_action.BaseAction object at 0x000001FD29718730>, locator = '//*[text()=\"test\"]', text = 'abcd'\n\n    def assert_info(self, locator=None, text=None):\n        if text is not None:\n            try:\n>               assert text == str(self.find_element(locator).text)\nE               AssertionError\n\ntools\\base_action.py:102: AssertionError",
+    "steps" : [ {
+      "name" : "打开网页",
+      "time" : {
+        "start" : 1609320155306,
+        "stop" : 1609320162453,
+        "duration" : 7147
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "系统配置",
+      "time" : {
+        "start" : 1609320162453,
+        "stop" : 1609320162500,
+        "duration" : 47
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "一次设备",
+      "time" : {
+        "start" : 1609320162500,
+        "stop" : 1609320162605,
+        "duration" : 105
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "添加按钮",
+      "time" : {
+        "start" : 1609320162605,
+        "stop" : 1609320162952,
+        "duration" : 347
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "设备类型",
+      "time" : {
+        "start" : 1609320162952,
+        "stop" : 1609320163287,
+        "duration" : 335
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "设备名称",
+      "time" : {
+        "start" : 1609320163287,
+        "stop" : 1609320163404,
+        "duration" : 117
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "设备编码",
+      "time" : {
+        "start" : 1609320163404,
+        "stop" : 1609320163514,
+        "duration" : 110
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "电压等级",
+      "time" : {
+        "start" : 1609320163514,
+        "stop" : 1609320163584,
+        "duration" : 70
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "设备名称",
+      "time" : {
+        "start" : 1609320163584,
+        "stop" : 1609320163678,
+        "duration" : 94
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "选择厂家",
+      "time" : {
+        "start" : 1609320163678,
+        "stop" : 1609320163831,
+        "duration" : 153
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "投运日期",
+      "time" : {
+        "start" : 1609320163831,
+        "stop" : 1609320163969,
+        "duration" : 138
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "保存按钮",
+      "time" : {
+        "start" : 1609320163969,
+        "stop" : 1609320164028,
+        "duration" : 59
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "sleep",
+      "time" : {
+        "start" : 1609320164028,
+        "stop" : 1609320166029,
+        "duration" : 2001
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "断言",
+      "time" : {
+        "start" : 1609320166029,
+        "stop" : 1609320166482,
+        "duration" : 453
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError\n",
+      "statusTrace" : "  File \"C:\\Users\\YF2010104010\\Desktop\\DDTWebTest\\scripts\\test_meishan_project.py\", line 53, in test_1add_device\n    raise e\n  File \"C:\\Users\\YF2010104010\\Desktop\\DDTWebTest\\scripts\\test_meishan_project.py\", line 48, in test_1add_device\n    func(*values)\n  File \"C:\\Users\\YF2010104010\\Desktop\\DDTWebTest\\tools\\base_action.py\", line 102, in assert_info\n    assert text == str(self.find_element(locator).text)\n",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "59d92de6d1a5d6d8",
+        "name" : "2020-12-30 17:22:46断言",
+        "source" : "59d92de6d1a5d6d8.png",
+        "type" : "image/png",
+        "size" : 289473
+      } ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : true,
+      "attachmentsCount" : 1,
+      "hasContent" : true,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 1,
+    "hasContent" : true,
+    "stepsCount" : 14
+  },
+  "afterStages" : [ {
+    "name" : "xunit_setup_class_fixture_TestAddDevice::0",
+    "time" : {
+      "start" : 1609320166586,
+      "stop" : 1609320170742,
+      "duration" : 4156
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "Add device"
+  }, {
+    "name" : "feature",
+    "value" : "Mei Shan Project"
+  }, {
+    "name" : "tag",
+    "value" : "run(order=1)"
+  }, {
+    "name" : "parentSuite",
+    "value" : "scripts"
+  }, {
+    "name" : "suite",
+    "value" : "test_meishan_project"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAddDevice"
+  }, {
+    "name" : "host",
+    "value" : "bin"
+  }, {
+    "name" : "thread",
+    "value" : "170784-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "scripts.test_meishan_project"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "add_device",
+    "value" : "{'title': '添加电力设备', 'description': '添加电力设备成功', 'cases': [{'name': '打开网页', 'method': 'open_url', 'url': 'http://121.37.130.248'}, {'name': '系统配置', 'method': 'click', 'locator': '//*[text()=\"系统配置\"]'}, {'name': '一次设备', 'method': 'click', 'locator': '//*[text()=\"一次设备\"]'}, {'name': '添加按钮', 'method': 'click', 'locator': '//*[text()=\"添加设备\"]'}, {'name': '设备类型', 'method': 'select_info', 'locator': '//*[@id=\"app\"]/section/section/main/section/main/div/div[2]/div/div[1]/div/div/input', 'select_value': '(//*[text()=\"主变压器\"])[2]'}, {'name': '设备名称', 'method': 'input_info', 'locator': '//*[@id=\"app\"]/section/section/main/section/main/div/div[2]/div/div[2]/div/input', 'value': 'test'}, {'name': '设备编码', 'method': 'input_info', 'locator': '//*[@id=\"app\"]/section/section/main/section/main/div/div[2]/div/div[3]/div/input', 'value': 10000}, {'name': '电压等级', 'method': 'input_info', 'locator': '//*[@id=\"app\"]/section/section/main/section/main/div/div[2]/div/div[4]/div/input', 'value': 2}, {'name': '设备名称', 'method': 'input_info', 'locator': '//*[@id=\"app\"]/section/section/main/section/main/div/div[2]/div/div[2]/div/input', 'value': 'test'}, {'name': '选择厂家', 'method': 'select_info', 'locator': '//*[@id=\"app\"]/section/section/main/section/main/div/div[2]/div/div[5]/div/div/input', 'select_value': '//*[text()=\"赛康\"]'}, {'name': '投运日期', 'method': 'input_info', 'locator': '//*[@id=\"app\"]/section/section/main/section/main/div/div[2]/div/div[6]/div/input', 'select_value': '2020-12-11'}, {'name': '保存按钮', 'method': 'click', 'locator': '//*[@id=\"app\"]/section/section/main/section/main/div/div[3]/div[4]'}, {'name': 'sleep', 'method': 'sleep_time', 'value': 2}, {'name': '断言', 'method': 'assert_info', 'locator': '//*[text()=\"test\"]', 'value': 'abcd'}]}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "17053f0518d6e2aa",
+      "status" : "passed",
+      "time" : {
+        "start" : 1609317857830,
+        "stop" : 1609317868020,
+        "duration" : 10190
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ "run(order=1)" ]
+  },
+  "source" : "76b74ef78fb09096.json",
+  "parameterValues" : [ "{'title': '添加电力设备', 'description': '添加电力设备成功', 'cases': [{'name': '打开网页', 'method': 'open_url', 'url': 'http://121.37.130.248'}, {'name': '系统配置', 'method': 'click', 'locator': '//*[text()=\"系统配置\"]'}, {'name': '一次设备', 'method': 'click', 'locator': '//*[text()=\"一次设备\"]'}, {'name': '添加按钮', 'method': 'click', 'locator': '//*[text()=\"添加设备\"]'}, {'name': '设备类型', 'method': 'select_info', 'locator': '//*[@id=\"app\"]/section/section/main/section/main/div/div[2]/div/div[1]/div/div/input', 'select_value': '(//*[text()=\"主变压器\"])[2]'}, {'name': '设备名称', 'method': 'input_info', 'locator': '//*[@id=\"app\"]/section/section/main/section/main/div/div[2]/div/div[2]/div/input', 'value': 'test'}, {'name': '设备编码', 'method': 'input_info', 'locator': '//*[@id=\"app\"]/section/section/main/section/main/div/div[2]/div/div[3]/div/input', 'value': 10000}, {'name': '电压等级', 'method': 'input_info', 'locator': '//*[@id=\"app\"]/section/section/main/section/main/div/div[2]/div/div[4]/div/input', 'value': 2}, {'name': '设备名称', 'method': 'input_info', 'locator': '//*[@id=\"app\"]/section/section/main/section/main/div/div[2]/div/div[2]/div/input', 'value': 'test'}, {'name': '选择厂家', 'method': 'select_info', 'locator': '//*[@id=\"app\"]/section/section/main/section/main/div/div[2]/div/div[5]/div/div/input', 'select_value': '//*[text()=\"赛康\"]'}, {'name': '投运日期', 'method': 'input_info', 'locator': '//*[@id=\"app\"]/section/section/main/section/main/div/div[2]/div/div[6]/div/input', 'select_value': '2020-12-11'}, {'name': '保存按钮', 'method': 'click', 'locator': '//*[@id=\"app\"]/section/section/main/section/main/div/div[3]/div[4]'}, {'name': 'sleep', 'method': 'sleep_time', 'value': 2}, {'name': '断言', 'method': 'assert_info', 'locator': '//*[text()=\"test\"]', 'value': 'abcd'}]}" ]
+}

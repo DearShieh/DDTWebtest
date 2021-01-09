@@ -1,0 +1,25 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "bin",
+    "children" : [ {
+      "name" : "170784-MainThread",
+      "children" : [ {
+        "name" : "添加电力设备",
+        "uid" : "76b74ef78fb09096",
+        "parentUid" : "b20b0181a6562092966ab2a0b888a2f5",
+        "status" : "failed",
+        "time" : {
+          "start" : 1609320155306,
+          "stop" : 1609320166482,
+          "duration" : 11176
+        },
+        "flaky" : false,
+        "parameters" : [ "{'title': '添加电力设备', 'description': '添加电力设备成功', 'cases': [{'name': '打开网页', 'method': 'open_url', 'url': 'http://121.37.130.248'}, {'name': '系统配置', 'method': 'click', 'locator': '//*[text()=\"系统配置\"]'}, {'name': '一次设备', 'method': 'click', 'locator': '//*[text()=\"一次设备\"]'}, {'name': '添加按钮', 'method': 'click', 'locator': '//*[text()=\"添加设备\"]'}, {'name': '设备类型', 'method': 'select_info', 'locator': '//*[@id=\"app\"]/section/section/main/section/main/div/div[2]/div/div[1]/div/div/input', 'select_value': '(//*[text()=\"主变压器\"])[2]'}, {'name': '设备名称', 'method': 'input_info', 'locator': '//*[@id=\"app\"]/section/section/main/section/main/div/div[2]/div/div[2]/div/input', 'value': 'test'}, {'name': '设备编码', 'method': 'input_info', 'locator': '//*[@id=\"app\"]/section/section/main/section/main/div/div[2]/div/div[3]/div/input', 'value': 10000}, {'name': '电压等级', 'method': 'input_info', 'locator': '//*[@id=\"app\"]/section/section/main/section/main/div/div[2]/div/div[4]/div/input', 'value': 2}, {'name': '设备名称', 'method': 'input_info', 'locator': '//*[@id=\"app\"]/section/section/main/section/main/div/div[2]/div/div[2]/div/input', 'value': 'test'}, {'name': '选择厂家', 'method': 'select_info', 'locator': '//*[@id=\"app\"]/section/section/main/section/main/div/div[2]/div/div[5]/div/div/input', 'select_value': '//*[text()=\"赛康\"]'}, {'name': '投运日期', 'method': 'input_info', 'locator': '//*[@id=\"app\"]/section/section/main/section/main/div/div[2]/div/div[6]/div/input', 'select_value': '2020-12-11'}, {'name': '保存按钮', 'method': 'click', 'locator': '//*[@id=\"app\"]/section/section/main/section/main/div/div[3]/div[4]'}, {'name': 'sleep', 'method': 'sleep_time', 'value': 2}, {'name': '断言', 'method': 'assert_info', 'locator': '//*[text()=\"test\"]', 'value': 'abcd'}]}" ]
+      } ],
+      "uid" : "b20b0181a6562092966ab2a0b888a2f5"
+    } ],
+    "uid" : "eb7936b675e96a6eee6b639bcff58eaa"
+  } ]
+}
